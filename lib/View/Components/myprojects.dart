@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/Responsive/responsive.dart';
 import 'package:my_portfolio/models/project_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyProjects extends StatelessWidget {
   const MyProjects({super.key});
@@ -19,8 +20,8 @@ class MyProjects extends StatelessWidget {
         const SizedBox(height: 10),
         Wrap(
           children: [
-            ProjectCard(projectModel: projects[0], url: ""),
-            ProjectCard(projectModel: projects[1], url: ""),
+            ProjectCard(projectModel: projects[0], url: "https://drive.google.com/drive/folders/1BDdQoYXgLlXvUO1aSy5812F-F_ZO7EMD?usp=sharing"),
+            ProjectCard(projectModel: projects[1], url: "https://drive.google.com/drive/folders/13_SxSjtTQUUHSNTYbTdw2maMmRCoYPoE?usp=sharing"),
           ],
         ),
       ],
@@ -84,7 +85,9 @@ class ProjectCard extends StatelessWidget {
                   bottom: 6,
                 ),
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      launchUrl(Uri.parse(url),);
+                    },
                     child: const Text(
                       "Check this",
                       style: TextStyle(

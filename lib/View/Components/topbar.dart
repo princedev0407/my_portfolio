@@ -28,47 +28,79 @@ class TopBar extends StatelessWidget {
         padding:
             EdgeInsets.symmetric(horizontal: 10, vertical: isMobile ? 20 : 0),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            if (isMobile) Navigator.pop(context);
+            scrollController.animateTo(200,
+                duration: Duration(milliseconds: scrollDuration),
+                curve: Curves.bounceIn);
+          },
           child: const Text(
             "About",
             style: TextStyle(
-                fontSize: 20, color: textColor, fontWeight: FontWeight.w900,),
+              fontSize: 20,
+              color: textColor,
+              fontWeight: FontWeight.w900,
+            ),
           ),
         ),
       ),
       Padding(
         padding:
-        EdgeInsets.symmetric(horizontal: 10, vertical: isMobile ? 20 : 0),
+            EdgeInsets.symmetric(horizontal: 10, vertical: isMobile ? 20 : 0),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            if (isMobile) Navigator.pop(context);
+            scrollController.animateTo(isMobile ? 1050 :1100,
+                duration: Duration(milliseconds: scrollDuration),
+                curve: Curves.bounceIn);
+          },
           child: const Text(
             "Skills",
             style: TextStyle(
-              fontSize: 20, color: textColor, fontWeight: FontWeight.w900,),
+              fontSize: 20,
+              color: textColor,
+              fontWeight: FontWeight.w900,
+            ),
           ),
         ),
       ),
       Padding(
         padding:
-        EdgeInsets.symmetric(horizontal: 10, vertical: isMobile ? 20 : 0),
+            EdgeInsets.symmetric(horizontal: 10, vertical: isMobile ? 20 : 0),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            if (isMobile) Navigator.pop(context);
+            scrollController.animateTo(isMobile ? 1500 :1750,
+                duration: Duration(milliseconds: scrollDuration),
+                curve: Curves.bounceIn);
+          },
           child: const Text(
             "Projects",
             style: TextStyle(
-              fontSize: 20, color: textColor, fontWeight: FontWeight.w900,),
+              fontSize: 20,
+              color: textColor,
+              fontWeight: FontWeight.w900,
+            ),
           ),
         ),
       ),
       Padding(
         padding:
-        EdgeInsets.symmetric(horizontal: 10, vertical: isMobile ? 20 : 0),
+            EdgeInsets.symmetric(horizontal: 10, vertical: isMobile ? 20 : 0),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            if (isMobile) Navigator.pop(context);
+            scrollController.animateTo(isMobile ? 4000 :2750,
+                duration: Duration(milliseconds: scrollDuration),
+                curve: Curves.bounceIn);
+          },
           child: const Text(
             "Contact",
             style: TextStyle(
-              fontSize: 20, color: textColor, fontWeight: FontWeight.w900,),
+              fontSize: 20,
+              color: textColor,
+              fontWeight: FontWeight.w900,
+            ),
           ),
         ),
       ),

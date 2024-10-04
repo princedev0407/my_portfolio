@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:my_portfolio/Responsive/responsive.dart';
 import 'package:my_portfolio/Utils/colors.dart';
 import 'package:my_portfolio/View/Components/about_me.dart';
+import 'package:my_portfolio/View/Components/contactme.dart';
 import 'package:my_portfolio/View/Components/drawer.dart';
+import 'package:my_portfolio/View/Components/footer.dart';
 import 'package:my_portfolio/View/Components/myprojects.dart';
 import 'package:my_portfolio/View/Components/myskills.dart';
 import 'package:my_portfolio/View/Components/profile_intro.dart';
@@ -59,6 +61,11 @@ class MyPortfolio extends StatelessWidget {
                   MySkills(),
                   SizedBox(height: 55),
                   MyProjects(),
+                  SizedBox(height: 55),
+                  ContactMe(),
+                  SizedBox(height: 30),
+                  Footer(),
+                  SizedBox(height: 30),
                 ]
               ),
             ),
