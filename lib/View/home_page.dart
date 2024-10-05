@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/Responsive/responsive.dart';
 import 'package:my_portfolio/Utils/colors.dart';
-import 'package:my_portfolio/View/Components/about_me.dart';
-import 'package:my_portfolio/View/Components/contactme.dart';
-import 'package:my_portfolio/View/Components/drawer.dart';
-import 'package:my_portfolio/View/Components/footer.dart';
-import 'package:my_portfolio/View/Components/myprojects.dart';
-import 'package:my_portfolio/View/Components/myskills.dart';
-import 'package:my_portfolio/View/Components/profile_intro.dart';
-import 'package:my_portfolio/View/Components/topbar.dart';
+import 'package:my_portfolio/View/Pages/about_me.dart';
+import 'package:my_portfolio/View/Pages/contactme.dart';
+import 'package:my_portfolio/View/Pages/drawer.dart';
+import 'package:my_portfolio/View/Pages/footer.dart';
+import 'package:my_portfolio/View/Pages/myprojects.dart';
+import 'package:my_portfolio/View/Pages/myskills.dart';
+import 'package:my_portfolio/View/Pages/profile_intro.dart';
+import 'package:my_portfolio/View/Pages/sidelinks.dart';
+import 'package:my_portfolio/View/Pages/topbar.dart';
 
 class MyPortfolio extends StatelessWidget {
   MyPortfolio({super.key});
@@ -69,6 +70,7 @@ class MyPortfolio extends StatelessWidget {
                 ]
               ),
             ),
+            SideLinks(),
           ],
         ),
       ),

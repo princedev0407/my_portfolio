@@ -7,7 +7,12 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("© My Portfolio, All right reserved"),
+        Text(
+          '© My Portfolio, All right reserved',
+          style: TextStyle(
+            fontStyle: FontStyle.italic,
+          ),
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

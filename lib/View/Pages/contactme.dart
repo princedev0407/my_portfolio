@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/Responsive/responsive.dart';
 import 'package:my_portfolio/Utils/colors.dart';
+import 'dart:ui' as ui;
 
 class ContactMe extends StatelessWidget {
   const ContactMe({super.key});
@@ -10,10 +11,19 @@ class ContactMe extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "Get In Touch With Us",
+          "GET IN TOUCH!",
           style: TextStyle(
-            fontSize: 25,
+            fontSize: 30,
             fontWeight: FontWeight.w800,
+            foreground: Paint()
+            ..shader = ui.Gradient.linear(
+              Offset(0, 20),
+              Offset(150, 20),
+              <Color>[
+                Colors.red,
+                Colors.yellow,
+              ]
+            )
           ),
         ),
         SizedBox(height: 10),
@@ -31,22 +41,23 @@ class ContactMe extends StatelessWidget {
                 ),
               ],
               borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
+              color: Colors.grey[50],
             ),
             child: Padding(
               padding: EdgeInsets.all(20),
               child: Column(
                 children: [
-                  contactFormField("Name*", 1, "Your Name"),
-                  contactFormField("Email*", 1, "Your Email"),
-                  contactFormField("Phone*", 1, "Your Phone"),
-                  contactFormField("Message*", 10, "Your Message"),
+                  contactFormField("Name", 1, "Enter Your Name....."),
+                  contactFormField("Email", 1, "Enter Your Email....."),
+                  contactFormField("Phone", 1, "Enter Your Phone number....."),
+                  contactFormField("Message", 10, "Enter Your Message....."),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Expanded(
+                      Flexible(
                         child: OutlinedButton(
                           style: OutlinedButton.styleFrom(
-                            backgroundColor: Colors.blue,
+                            backgroundColor: Colors.cyan,
                           ),
                           onPressed: () {},
                           child: Text(

@@ -89,9 +89,10 @@ class ProjectCard extends StatelessWidget {
                       launchUrl(Uri.parse(url),);
                     },
                     child: const Text(
-                      "Check this",
+                      "Open",
                       style: TextStyle(
-                        fontSize: 17,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     ),
